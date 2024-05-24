@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BookMark</title>
+    <link rel="icon" href="bookmark.png">
+    <script src="https://kit.fontawesome.com/ae937d8a07.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <main class="position-relative color-modes py-5">
+    <section>
+        <div class="container d-flex flex-column justify-content-center align-items-center">
+        <div class="dropdown position-fixed bottom-0 end-0 mb-3 me-3 bd-mode-toggle">
+            <button class="btn btn-bd-primary py-2 dropdown-toggle d-flex align-items-center"
+                    id="bd-theme"
+                    type="button"
+                    aria-expanded="false"
+                    data-bs-toggle="dropdown"
+                    aria-label="Toggle theme (auto)">
+                <svg class="bi my-1 fs-5 theme-icon-active" width="1em" height="1em">
+                    <use href="bootstrap-icons-1.11.0/bootstrap-icons-1.11.0/circle-half.svg"></use>
+                </svg>
+                <span class="visually-hidden" id="bd-theme-text">Toggle theme</span>
+            </button>
+            <ul class="dropdown-menu dropdown-menu-end shadow" aria-labelledby="bd-theme-text">
+                <li>
+                    <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="light" aria-pressed="false">
+                        <svg class="bi me-2 opacity-50" width="1em" height="1em">
+                            <use href="bootstrap-icons-1.11.0/bootstrap-icons-1.11.0/sun-fill.svg"></use>
+                        </svg>
+                        Light
+                        <svg class="bi ms-auto d-none" width="1em" height="1em">
+                            <use href="#check2"></use>
+                        </svg>
+                    </button>
+                </li>
+                <li>
+                    <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="dark" aria-pressed="false">
+                        <svg class="bi me-2 opacity-50" width="1em" height="1em">
+                            <use href="bootstrap-icons-1.11.0/bootstrap-icons-1.11.0/moon-stars-fill.svg"></use>
+                        </svg>
+                        Dark
+                        <svg class="bi ms-auto d-none" width="1em" height="1em">
+                            <use href="#check2"></use>
+                        </svg>
+                    </button>
+                </li>
+                <li>
+                    <button type="button" class="dropdown-item d-flex align-items-center active" data-bs-theme-value="auto" aria-pressed="true">
+                        <svg class="bi me-2 opacity-50" width="1em" height="1em">
+                            <use href="#circle-half"></use>
+                        </svg>
+                        Auto
+                        <svg class="bi ms-auto d-none" width="1em" height="1em">
+                            <use href="#check2"></use>
+                        </svg>
+                    </button>
+                </li>
+            </ul>
+        </div>
+
+        <h1 class="py-2 position-relative">Bookmarker</h1>
+        <div class="d-flex bookmark-body w-100 p-3 py-4 mt-5 flex-column justify-content-center align-items-center gap-4">
+            <h2>
+                <i class="fa-solid fa-bookmark"></i>
+                Bookmark your favorite sites
+                <i class="fa-solid fa-bookmark"></i>
+            </h2>
+            <div class="site-name d-flex w-100 flex-column justify-content-center">
+                <label for="bookmarkName" class="pb-2">
+                    <i class="fa-solid fa-book-bookmark pe-2"></i>
+                    Site Name
+                </label>
+                <input type="text" placeholder="Bookmark Name" class="form-control" id="bookmarkName">
+            </div>
+            <div class="site-url d-flex w-100 flex-column justify-content-center">
+                <label for="bookmarkURL" class="pb-2 fw-semibold">
+                    <i class="fa-solid fa-link pe-2"></i>
+                    Site URL
+                </label>
+                <input type="url" placeholder="website URL" class="form-control" id="bookmarkURL">
+            </div>
+            <button class="btn-submit btn px-5" id="submitBtn">Submit</button>
+        </div>
+        <table class="table mt-4 text-center bg-light">
+            <thead>
+                <tr>
+                    <th class="text-capitalize">index</th>
+                    <th class="text-capitalize">website name</th>
+                    <th class="text-capitalize">visit</th>
+                    <th class="text-capitalize">delete</th>
+                    <th class="text-capitalize">update</th>
+                </tr>
+            </thead>
+            <tbody id="tableContent">
+            </tbody>
+        </table>
+        </div>
+        <div class="box-info position-absolute start-0 top-0 w-100 h-100 d-flex justify-content-center align-items-center d-none">
+            <div class="box-conent bg-white p-4 rounded-2 shadow-lg">
+            <header class="box-header w-100 d-flex justify-content-between align-items-center mb-4">
+            <div class="circles d-flex">
+                <span class="rounded-circle me-2"></span>
+                <span class="rounded-circle me-2"></span>
+                <span class="rounded-circle me-2"></span>
+            </div>
+            <button class="btn border-0" id="closeBtn">
+                <i class="fa-solid fa-xmark close fs-3"></i>
+            </button>
+            </header>
+            <p class="m-0 pb-2">
+            Site Name or Url is not valid, Please follow the rules below:
+            </p>
+            <ol class="rules list-unstyled m-0">
+            <li>
+                <i class="fa-regular fa-circle-right p-2"></i>Site name must
+                contain at least 3 characters
+            </li>
+            <li>
+                <i class="fa-regular fa-circle-right p-2"></i>Site URL must be a
+                valid one
+            </li>
+            </ol>
+        </div>
+        </div>
+        <hr class="mb-5 text-secondary">
+        <!--footer-->
+        <footer>
+            <p class="fw-bold text-secondary text-center">© 2024 Bookmarker Inc.</p>
+        </footer>
+
+</section>
+</main>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+<script src="js/color-modes.js"></script>
+<script src="js/index.js"></script>
+</body>
+</html>

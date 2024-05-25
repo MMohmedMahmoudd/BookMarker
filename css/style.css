@@ -1,5 +1,21 @@
 @import url("https://fonts.googleapis.com/css2?family=Bree+Serif&family=PT+Sans+Caption:wght@400;700&family=Pacifico&family=Righteous&family=Saira+Condensed:wght@300;400;500;600;700;800&display=swap");
 
+:root {
+  --bs-body-bg: #fff;
+  --bs-body-color: #212529;
+  --bs-emphasis-color: #000;
+  --bs-primary: #0d6efd;
+  --bs-secondary: #6c757d;
+}
+
+[data-bs-theme="dark"] {
+  --bs-body-bg: #212529;
+  --bs-body-color: #f8f9fa;
+  --bs-emphasis-color: #fff;
+  --bs-primary: #0d6efd;
+  --bs-secondary: #6c757d;
+}
+
 .bd-placeholder-img {
   font-size: 1.125rem;
   text-anchor: middle;
@@ -83,11 +99,10 @@
   text-shadow: none; 
 }
 
-
-
-
 body {
   font-family: "PT Sans Caption", sans-serif;
+  background-color: var(--bs-body-bg);
+  color: var(--bs-body-color);
 }
 
 ::selection {
@@ -97,7 +112,6 @@ body {
 
 main {
   min-height: 100vh;
-  
 }
 
 main h1 {
@@ -122,10 +136,11 @@ main h1::before {
 main h1:hover::before {
   height: 50%;
 }
-label{
-    color: var(--bs-emphasis-color);
-    font-size: 18px;
+label {
+  color: var(--bs-emphasis-color);
+  font-size: 18px;
 }
+
 .bookmark-body {
   border-width: 4px 0 4px 0;
   border-style: dotted;
@@ -135,12 +150,10 @@ label{
 .bookmark-body h2 {
   font-family: "Righteous", cursive;
   font-size: 25px;
-
   background: linear-gradient(to right, #4CAF50, #FFEB3B);
   background-clip: border-box;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-
 }
 
 .form-control:focus {
@@ -162,10 +175,10 @@ label{
   --bs-btn-hover-bg: #d30820;
   --bs-btn-hover-border-color: #ba081d;
 }
-.btn-delete:hover{
-    color: var(--bs-btn-hover-color);
-    background-color: var(--bs-btn-hover-bg);
-    border-color: var(--bs-btn-hover-border-color);
+.btn-delete:hover {
+  color: var(--bs-btn-hover-color);
+  background-color: var(--bs-btn-hover-bg);
+  border-color: var(--bs-btn-hover-border-color);
 }
 
 .btn-submit {
@@ -179,10 +192,10 @@ label{
   --bs-btn-hover-bg: #bb4120;
   --bs-btn-hover-border-color: #a03315;
 }
-.btn-submit:hover{
-    color: var(--bs-btn-hover-color);
-    background-color: var(--bs-btn-hover-bg);
-    border-color: var(--bs-btn-hover-border-color);
+.btn-submit:hover {
+  color: var(--bs-btn-hover-color);
+  background-color: var(--bs-btn-hover-bg);
+  border-color: var(--bs-btn-hover-border-color);
 }
 .btn-visit {
   --bs-btn-color: #fff;
@@ -195,10 +208,10 @@ label{
   --bs-btn-hover-bg: #8a9e23;
   --bs-btn-hover-border-color: #6e8018;
 }
-.btn-visit:hover{
-    color: var(--bs-btn-hover-color);
-    background-color: var(--bs-btn-hover-bg);
-    border-color: var(--bs-btn-hover-border-color);
+.btn-visit:hover {
+  color: var(--bs-btn-hover-color);
+  background-color: var(--bs-btn-hover-bg);
+  border-color: var(--bs-btn-hover-border-color);
 }
 
 table {

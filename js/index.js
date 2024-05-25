@@ -616,8 +616,8 @@ function displayBookmark(indexOfWebsite) {
   }
   var newBookmark = `
               <tr>
-                <td>${indexOfWebsite + 1}</td>
-                <td>${bookmarks[indexOfWebsite].websiteName}</td>              
+                <td class="text-black">${indexOfWebsite + 1}</td>
+                <td class="text-body-emphasis">${bookmarks[indexOfWebsite].websiteName}</td>              
                 <td>
                   <button class="btn btn-visit" data-index="${indexOfWebsite}">
                     <i class="fa-solid fa-eye pe-2"></i>Visit

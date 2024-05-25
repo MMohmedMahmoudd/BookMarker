@@ -39,7 +39,7 @@
                     </button>
                 </li>
                 <li>
-                    <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="dark" aria-pressed="false">
+                    <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="dark" aria-pressed="true">
                         <svg class="bi me-2 opacity-50" width="1em" height="1em">
                             <use href="bootstrap-icons-1.11.0/bootstrap-icons-1.11.0/moon-stars-fill.svg"></use>
                         </svg>
@@ -50,7 +50,7 @@
                     </button>
                 </li>
                 <li>
-                    <button type="button" class="dropdown-item d-flex align-items-center active" data-bs-theme-value="auto" aria-pressed="true">
+                    <button type="button" class="dropdown-item d-flex align-items-center active" data-bs-theme-value="auto" aria-pressed="false">
                         <svg class="bi me-2 opacity-50" width="1em" height="1em">
                             <use href="#circle-half"></use>
                         </svg>
@@ -86,8 +86,8 @@
             </div>
             <button class="btn-submit btn px-5" id="submitBtn">Submit</button>
         </div>
-        <table class="table mt-4 text-center text-light">
-            <thead>
+        <table class="table mt-4 text-center ">
+            <thead class="bg-secondary">
                 <tr>
                     <th class="text-capitalize">index</th>
                     <th class="text-capitalize">website name</th>
@@ -96,11 +96,11 @@
                     <th class="text-capitalize">update</th>
                 </tr>
             </thead>
-            <tbody id="tableContent">
+            <tbody id="tableContent" class="bg-white">
             </tbody>
         </table>
         </div>
-        <div class="box-info position-absolute start-0 top-0 w-100 h-100 d-flex justify-content-center align-items-center d-none">
+        <div class="box-info position-absolute start-0 top-0 w-10 0 h-100 d-flex justify-content-center align-items-center d-none">
             <div class="box-conent bg-white p-4 rounded-2 shadow-lg">
             <header class="box-header w-100 d-flex justify-content-between align-items-center mb-4">
             <div class="circles d-flex">

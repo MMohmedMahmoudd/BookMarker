@@ -220,6 +220,10 @@ table {
 
 .box-info {
   background-color: #0007;
+  width: 100% !important;
+}
+.rules li{
+  color: #352e28;
 }
 
 .box-conent {

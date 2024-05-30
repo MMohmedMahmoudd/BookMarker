@@ -614,10 +614,23 @@ function displayBookmark(indexOfWebsite) {
     fixedURL = userURL;
     validURL = `https://${userURL}`;
   }
+  var domain = fixedURL.split('/')[0];
+
   var newBookmark = `
               <tr>
                 <td class="text-black">${indexOfWebsite + 1}</td>
-                <td class="text-body-emphasis">${bookmarks[indexOfWebsite].websiteName}</td>              
+                <td class="text-body-emphasis">
+                <div class="popo w-75 d-flex justify-content-around align-items-center ">
+                  <img
+                    src="https://www.google.com/s2/favicons?domain=${domain}&sz=128"
+                    alt="${bookmarks[indexOfWebsite].websiteName}"
+                    loading="lazy"
+                    class="d-block icon w-25"
+                  />
+                  ${bookmarks[indexOfWebsite].websiteName}
+                </div>
+      
+                </td>              
                 <td>
                   <button class="btn btn-visit" data-index="${indexOfWebsite}">
                     <i class="fa-solid fa-eye pe-2"></i>Visit

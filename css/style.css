@@ -144,7 +144,7 @@ label {
 .bookmark-body {
   border-width: 4px 0 4px 0;
   border-style: dotted;
-  border-color: #fff;
+  border-color: var(--bs-body-color);
 }
 
 .bookmark-body h2 {

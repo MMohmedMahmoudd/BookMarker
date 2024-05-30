@@ -84,6 +84,9 @@
   --bs-btn-active-bg: #5a23c8;
   --bs-btn-active-border-color: #5a23c8;
 }
+button.dropdown-toggle{
+  background-color: #712cf9;
+}
 
 .bd-mode-toggle {
   z-index: 1500;
